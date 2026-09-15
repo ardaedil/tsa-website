@@ -1,0 +1,62 @@
+//base styles
+
+body
+  font-family: "Open Sans", sans-serif
+
+h1
+  color: #ccc
+  weight: 300
+
+figure
+  margin: auto
+
+.content
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+
+img
+  max-width: 100%
+
+// Parallax
+
+.bird-box
+  position: relative
+  height: 600px
+  background:
+    image: url(/imgs/untitled.jpg)
+    size: auto 600px
+    position: top center
+    attachment: fixed
+  overflow: hidden
+
+  .logo
+    height: 100px
+    width: 100%auto
+    background:
+      image: url(/imgs/black-bird-logo.svg)
+      position: center
+      repeat: no-repeat
+    position: relative
+    top: 50%
+    margin-top: -50px
+
+  .fore-bird
+    height: 600px
+    background:
+      image:url(/imgs/baloonGroup.png)
+      size: auto 600px
+      position:top center
+
+  .back-bird
+    width: 960px
+    height: 298px
+    background:
+      image: url(/imgs/back-bird.png)
+      repeat: no-repeat
+      position: top left
+    position: absolute
+    left:50%
+    margin-left: -480px
