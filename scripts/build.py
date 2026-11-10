@@ -191,5 +191,5 @@ if __name__ == '__main__':
         ('join.html', 'Join & Contact', 'Get involved with TSA, ask a question, or contact the Turkish Student Association board at Michigan.', join),
     ]
     for filename, title, description, render in pages:
-        (ROOT / filename).write_text(document(filename, title, description, render()), encoding='utf-8')
+        (ROOT / filename).write_text(document(filename, title, description, render()), encoding='utf-8', newline='\n')
     print(f'Built {len(pages)} pages with {len(DATA["board"])} board members.')

@@ -7,4 +7,3 @@
 @media(prefers-reduced-motion:no-preference){a,button{transition:background-color .16s ease,border-color .16s ease}}
 @media print{.site-header,.site-footer,.button,.menu-toggle{display:none}.hero{background:white;color:var(--blue)}.hero p{color:var(--muted)}.wrap{width:100%}}
 @media(max-width:480px){.brand-caption{max-width:120px;font-size:8px}.brand{gap:10px}.header-inner{align-content:center;row-gap:10px;padding-block:14px}}
-
