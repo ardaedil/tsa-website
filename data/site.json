@@ -1,0 +1,31 @@
+{
+  "name": "Turkish Student Association",
+  "university": "University of Michigan",
+  "contactEmail": "ardaedil@umich.edu",
+  "contactName": "Arda Edil",
+  "heroPhoto": null,
+  "instagramUrl": null,
+  "communityUrl": null,
+  "board": [
+    {"name": "Dilara Nevin Arican", "role": "Event Organizer Chair", "email": "aricand@umich.edu", "photo": null, "bio": ""},
+    {"name": "Bora Bedir", "role": "Vice President", "email": "bedir@umich.edu", "photo": null, "bio": ""},
+    {"name": "Poyraz Canbek", "role": "Social Chair", "email": "poyraz@umich.edu", "photo": null, "bio": ""},
+    {"name": "Arda Edil", "role": "President", "email": "ardaedil@umich.edu", "photo": null, "bio": ""},
+    {"name": "Eda Deniz Gur", "role": "Cultural Chair", "email": "edeniz@umich.edu", "photo": null, "bio": ""},
+    {"name": "Ogulcan Makaraci", "role": "Sportive Activities Chair", "email": "makaraci@umich.edu", "photo": null, "bio": ""},
+    {"name": "Alara Onur", "role": "Outreach Chair", "email": "aonur@umich.edu", "photo": null, "bio": ""},
+    {"name": "Kerim Onder Ulucay", "role": "Finance Chair", "email": "ulucay@umich.edu", "photo": null, "bio": ""},
+    {"name": "Besim Yucel", "role": "Treasurer", "email": "byucel@umich.edu", "photo": null, "bio": ""}
+  ],
+  "events": [
+    {"id": "tea-conversation", "title": "Çay & Conversation", "date": "Date to be announced", "location": "Venue to be announced", "upcoming": true, "sample": true, "summary": "A cup of tea and a chance to meet the TSA community.", "cover": null, "photos": []},
+    {"id": "welcome-picnic", "title": "Welcome Picnic", "date": "Sample past event", "location": "Ann Arbor", "upcoming": false, "sample": true, "summary": "A place for a short recap of the gathering.", "cover": null, "photos": []},
+    {"id": "culture-night", "title": "Turkish Culture Night", "date": "Sample past event", "location": "Ann Arbor", "upcoming": false, "sample": true, "summary": "Event highlights, shared traditions, and community photos will go here.", "cover": null, "photos": []},
+    {"id": "community-dinner", "title": "Community Dinner", "date": "Sample past event", "location": "Ann Arbor", "upcoming": false, "sample": true, "summary": "A place for the story and photographs from a shared evening.", "cover": null, "photos": []}
+  ],
+  "newsletters": [
+    {"id": "sample-03", "title": "A little closer to home", "date": "Sample edition", "sample": true, "summary": "Upcoming gatherings, community news, and a note from the board.", "paragraphs": ["Merhaba, Michigan!", "This is a sample newsletter. Future editions will share upcoming events, community updates, and notes from the TSA board.", "We'll replace this text with the first weekly issue. Until then, explore the board and get in touch if you'd like to be involved.", "Your TSA board"]},
+    {"id": "sample-02", "title": "Around our community", "date": "Sample archive edition", "sample": true, "summary": "A place for news and stories from the TSA community.", "paragraphs": ["Merhaba!", "This sample archive entry shows where a previous weekly newsletter will appear. Real issue dates, stories, and announcements will be added here.", "Your TSA board"]},
+    {"id": "sample-01", "title": "A new semester, together", "date": "Sample archive edition", "sample": true, "summary": "A place for a welcome letter and the start of a new semester.", "paragraphs": ["Merhaba, Michigan!", "This is a placeholder for a past newsletter. It will be replaced by a published issue from the TSA board.", "Your TSA board"]}
+  ]
+}
