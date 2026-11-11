@@ -158,6 +158,10 @@ def join():
     <div class="contact-channels"><div class="eyebrow">Prefer email?</div><p>Contact the board through:</p>{channels}</div></aside></div></div></section>'''
 
 
+def brand_markup():
+    return '''<a class="brand" href="index.html" aria-label="TSA at the University of Michigan home"><span class="wordmark">TSA<svg class="brand-at" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"></path></svg></span><span class="brand-caption"><span class="brand-university">University of Michigan</span><span class="brand-description">Turkish Student Association</span></span></a>'''
+
+
 def document(filename, title, description, body):
     styles_version = hashlib.sha256((ROOT / 'assets/styles.css').read_bytes()).hexdigest()[:12]
     script_version = hashlib.sha256((ROOT / 'assets/site.js').read_bytes()).hexdigest()[:12]
@@ -166,13 +170,13 @@ def document(filename, title, description, body):
     payload = json.dumps({'contactEmail': DATA['contactEmail'], 'events': DATA['events'], 'newsletters': DATA['newsletters']}, ensure_ascii=False).replace('<', '\\u003c')
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(title)} | TSA at Michigan</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#00274c">
-<meta property="og:title" content="{e(title)} | TSA at Michigan"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website">
+<title>{e(title)} | TSA @ University of Michigan</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#00274c">
+<meta property="og:title" content="{e(title)} | TSA @ University of Michigan"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v={styles_version}"><script src="assets/site.js?v={script_version}" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="index.html" aria-label="TSA at the University of Michigan home"><span class="wordmark">TSA <span class="brand-at">@</span></span><span class="brand-caption"><span class="brand-university">University of Michigan</span><span class="brand-description">Turkish Student Association</span></span></a>
+{brand_markup()}
 <nav id="site-navigation" class="site-nav" aria-label="Main navigation">{navigation}</nav></div></header>
-<main id="main">{body}</main><footer class="site-footer"><div class="wrap footer-inner"><div class="footer-brand"><a class="brand" href="index.html" aria-label="TSA at the University of Michigan home"><span class="wordmark">TSA <span class="brand-at">@</span></span><span class="brand-caption"><span class="brand-university">University of Michigan</span><span class="brand-description">Turkish Student Association</span></span></a><p lang="tr">Türk Öğrenci Derneği</p></div>
+<main id="main">{body}</main><footer class="site-footer"><div class="wrap footer-inner"><div class="footer-brand">{brand_markup()}<p lang="tr">Türk Öğrenci Derneği</p></div>
 <div><nav class="footer-links" aria-label="Footer navigation">{footer_nav}<a href="constitution.pdf">Constitution (PDF)</a></nav><p class="footer-university">Turkish Student Association<br>University of Michigan · Ann Arbor</p></div></div></footer>
 <dialog class="dialog" id="content-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><div class="dialog-header"><div><div id="dialog-label" class="sample-label"></div><h2 id="dialog-title"></h2></div><button class="close-button" id="close-dialog" type="button" autofocus>Close</button></div><div id="dialog-body"></div></div></dialog>
 <noscript><p class="no-script wrap">JavaScript enables photo albums, newsletter readers, and email draft forms. You can still browse every page and email <a href="mailto:{e(DATA['contactEmail'])}">{e(DATA['contactEmail'])}</a> directly.</p></noscript>
