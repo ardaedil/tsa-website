@@ -54,7 +54,11 @@ Check generated links, asset paths, form labels, page headings, issue data, and 
 
 ## GitHub Pages
 
-Generated HTML and assets are checked in at the repository root. If Pages hosting is wanted, select **Deploy from a branch → main → /(root)** in the repository's Pages settings. `.nojekyll` prevents extra processing. Uploading code does not by itself enable GitHub Pages; no new hosting service is configured by this change.
+Live preview: [ardaedil.github.io/tsa-website](https://ardaedil.github.io/tsa-website/).
+
+GitHub Pages publishes the generated HTML and assets from **main → /(root)**. Changes pushed to `main` trigger the Pages deployment. `.nojekyll` prevents extra processing. The U-M website is hosted separately and is not changed by GitHub Pages deployments.
+
+Navigation links remain visible on every screen size. English page titles are paired with selected Turkish labels, marked with `lang="tr"` for assistive technologies.
 
 ## Original website backup
 

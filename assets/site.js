@@ -1,24 +1,3 @@
-document.documentElement.classList.add('js');
-
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.site-nav');
-if (menuButton && navigation) {
-  menuButton.addEventListener('click', () => {
-    const open = menuButton.getAttribute('aria-expanded') !== 'true';
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? 'Close menu' : 'Menu';
-    navigation.classList.toggle('is-open', open);
-  });
-  navigation.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
-      navigation.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.textContent = 'Menu';
-      menuButton.focus();
-    }
-  });
-}
-
 const content = JSON.parse(document.getElementById('site-content').textContent);
 const dialog = document.getElementById('content-dialog');
 const dialogTitle = document.getElementById('dialog-title');
