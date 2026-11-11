@@ -73,8 +73,8 @@ def home():
     feature = ''
     if featured:
         translation = f'<div class="eyebrow" lang="tr">{e(featured["titleTr"])}</div>' if featured.get('titleTr') else '<div class="eyebrow">TSA Events</div>'
-        feature = f'''<section class="section tinted"><div class="wrap home-feature">{photo(featured['cover'], featured['title'], 'featured-photo')}<div>{translation}<h2>{e(featured['title'])}</h2>
-        <div class="meta">{e(featured['date'])}</div><p>{e(featured['summary'])}</p>{button('events.html#' + featured['id'], 'View Event Photos')}</div></div></section>'''
+        feature = f'''<section class="section tinted"><div class="wrap home-event-summary"><div>{translation}<h2>{e(featured['title'])}</h2>
+        <div class="meta">{e(featured['date'])}</div></div>{button('events.html#' + featured['id'], 'View Event Photos')}</div></section>'''
     return f'''<section class="hero home-hero"><div class="wrap home-grid"><div><div class="eyebrow" lang="tr">Michigan Üniversitesi</div>
     <h1>Turkish Student<br>Association</h1><p>Connecting students through Turkish culture, campus events, and community at the University of Michigan.</p>
     {button('join.html', 'Join TSA')}</div>{image}</div></section>
