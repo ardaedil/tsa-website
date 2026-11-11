@@ -3,7 +3,7 @@
 Five static pages in the **Michigan After Hours** style: Michigan blue `#00274C`, deep crimson `#B5121B`, and white.
 
 - `index.html` — Home
-- `board.html` — Board (all nine supplied members, alphabetically by last name)
+- `board.html` — Board (President, Vice President, and Treasurer first, followed by the remaining six members)
 - `events.html` — Upcoming gatherings and past-event photo albums
 - `newsletter.html` — The TSA Weekly, issue reader, archive, and email signup requests
 - `join.html` — Joining inquiries, collaboration, and contact

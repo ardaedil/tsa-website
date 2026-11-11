@@ -8,9 +8,9 @@
   "communityUrl": null,
   "board": [
     {
-      "name": "Dilara Nevin Arican",
-      "role": "Event Organizer Chair",
-      "email": "aricand@umich.edu",
+      "name": "Arda Edil",
+      "role": "President",
+      "email": "ardaedil@umich.edu",
       "photo": null,
       "bio": ""
     },
@@ -22,16 +22,23 @@
       "bio": ""
     },
     {
-      "name": "Poyraz Canbek",
-      "role": "Social Chair",
-      "email": "poyraz@umich.edu",
+      "name": "Besim Yucel",
+      "role": "Treasurer",
+      "email": "byucel@umich.edu",
       "photo": null,
       "bio": ""
     },
     {
-      "name": "Arda Edil",
-      "role": "President",
-      "email": "ardaedil@umich.edu",
+      "name": "Dilara Nevin Arican",
+      "role": "Event Organizer Chair",
+      "email": "aricand@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Poyraz Canbek",
+      "role": "Social Chair",
+      "email": "poyraz@umich.edu",
       "photo": null,
       "bio": ""
     },
@@ -60,13 +67,6 @@
       "name": "Kerim Onder Ulucay",
       "role": "Finance Chair",
       "email": "ulucay@umich.edu",
-      "photo": null,
-      "bio": ""
-    },
-    {
-      "name": "Besim Yucel",
-      "role": "Treasurer",
-      "email": "byucel@umich.edu",
       "photo": null,
       "bio": ""
     }
@@ -157,8 +157,8 @@
     },
     {
       "id": "soccer",
-      "title": "Soccer",
-      "titleTr": "Futbol",
+      "title": "Intramural Sports",
+      "titleTr": "Üniversite İçi Sporlar",
       "date": "Fall 2026",
       "location": "",
       "upcoming": false,

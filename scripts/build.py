@@ -96,7 +96,7 @@ def board():
         cards.append(f'''<article class="board-member">{portrait}<h2>{e(member['name'])}</h2><div class="member-role">{e(member['role'])}</div>
         <a class="member-email" href="mailto:{e(member['email'])}">{e(member['email'])}</a>{bio}</article>''')
     return hero('Yönetim Kurulu', 'Board Members', 'The student leadership team of the Turkish Student Association at the University of Michigan.') + f'''
-    <section class="section"><div class="wrap"><div class="section-heading"><h2>Current Board</h2><p>Listed alphabetically by last name</p></div>
+    <section class="section"><div class="wrap"><div class="section-heading"><h2>Current Board</h2></div>
     <div class="board-grid">{''.join(cards)}</div><div class="bottom-note"><p>Have a question or an idea for TSA?</p>{button('join.html', 'Get in touch')}</div></div></section>'''
 
 

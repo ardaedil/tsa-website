@@ -83,5 +83,5 @@ assert pages['board.html'].members == 9, 'Expected all nine authorized board mem
 board_html = (ROOT / 'board.html').read_text(encoding='utf-8')
 for member in roster:
     assert f'mailto:{member["email"]}' in board_html, f'Missing board email: {member["name"]}'
-assert [member['name'].split()[-1] for member in roster] == sorted(member['name'].split()[-1] for member in roster), 'Roster must be alphabetical by last name'
+assert [member['role'] for member in roster[:3]] == ['President', 'Vice President', 'Treasurer'], 'Board must begin with President, Vice President, Treasurer'
 print(f'Checked {len(pages)} pages, {references} local references, {len(album_photos)} album photos, form labels, issue data, and all 9 board members.')
