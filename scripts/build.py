@@ -1,5 +1,6 @@
 """Build the five static pages from data/site.json. Python standard library only."""
 from html import escape
+import hashlib
 import json
 from pathlib import Path
 from urllib.parse import quote, urlsplit
@@ -158,6 +159,8 @@ def join():
 
 
 def document(filename, title, description, body):
+    styles_version = hashlib.sha256((ROOT / 'assets/styles.css').read_bytes()).hexdigest()[:12]
+    script_version = hashlib.sha256((ROOT / 'assets/site.js').read_bytes()).hexdigest()[:12]
     navigation = ''.join(f'<a href="{path}"' + (' aria-current="page"' if filename == path else '') + f'>{e(label)}</a>' for path, label in NAV)
     footer_nav = ''.join(f'<a href="{path}">{e(label)}</a>' for path, label in NAV)
     payload = json.dumps({'contactEmail': DATA['contactEmail'], 'events': DATA['events'], 'newsletters': DATA['newsletters']}, ensure_ascii=False).replace('<', '\\u003c')
@@ -165,7 +168,7 @@ def document(filename, title, description, body):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)} | TSA at Michigan</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#00274c">
 <meta property="og:title" content="{e(title)} | TSA at Michigan"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css"><script src="assets/site.js" defer></script></head>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v={styles_version}"><script src="assets/site.js?v={script_version}" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="TSA at Michigan home"><span class="wordmark">TSA.</span><span class="brand-caption">Turkish Student Association<br>University of Michigan</span></a>
 <nav id="site-navigation" class="site-nav" aria-label="Main navigation">{navigation}</nav></div></header>
