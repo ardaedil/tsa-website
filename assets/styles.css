@@ -9,6 +9,13 @@
 
 
 /* Navigation stays visible at every width. */
+.home-photo{height:auto;aspect-ratio:4/3;object-fit:contain}
+.home-feature .featured-photo{object-position:50% 58%}
+.event-card .photo,.album-grid .photo{object-fit:contain;background:var(--tint)}
+.event-card .photo+.sample-label{margin-top:15px}
+.upcoming-empty{margin-bottom:35px}
+.album-grid.is-single{grid-template-columns:1fr}
+.album-grid.is-single .photo{aspect-ratio:auto;max-height:65dvh;object-fit:contain}
 .home-poster .poster-type{font-size:clamp(36px,6.6vw,72px)}
 @media(max-width:760px){.header-inner{gap:10px;padding-block:22px 0}.brand{flex-basis:100%}.brand-caption{max-width:none;font-size:10px}.site-nav{gap:0 26px}.site-nav a{min-height:44px;padding:11px 0}}
 @media(max-width:480px){.brand{gap:12px}.brand-caption{font-size:9px}.site-nav{display:grid;grid-template-columns:repeat(3,max-content);column-gap:25px;row-gap:0;align-items:center}.site-nav a{font-size:12px;width:fit-content}.site-nav a:last-child{grid-column:span 2}}

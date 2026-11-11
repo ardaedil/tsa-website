@@ -3,29 +3,222 @@
   "university": "University of Michigan",
   "contactEmail": "ardaedil@umich.edu",
   "contactName": "Arda Edil",
-  "heroPhoto": null,
+  "heroPhoto": "assets/images/events/mangal-group.webp",
   "instagramUrl": null,
   "communityUrl": null,
   "board": [
-    {"name": "Dilara Nevin Arican", "role": "Event Organizer Chair", "email": "aricand@umich.edu", "photo": null, "bio": ""},
-    {"name": "Bora Bedir", "role": "Vice President", "email": "bedir@umich.edu", "photo": null, "bio": ""},
-    {"name": "Poyraz Canbek", "role": "Social Chair", "email": "poyraz@umich.edu", "photo": null, "bio": ""},
-    {"name": "Arda Edil", "role": "President", "email": "ardaedil@umich.edu", "photo": null, "bio": ""},
-    {"name": "Eda Deniz Gur", "role": "Cultural Chair", "email": "edeniz@umich.edu", "photo": null, "bio": ""},
-    {"name": "Ogulcan Makaraci", "role": "Sportive Activities Chair", "email": "makaraci@umich.edu", "photo": null, "bio": ""},
-    {"name": "Alara Onur", "role": "Outreach Chair", "email": "aonur@umich.edu", "photo": null, "bio": ""},
-    {"name": "Kerim Onder Ulucay", "role": "Finance Chair", "email": "ulucay@umich.edu", "photo": null, "bio": ""},
-    {"name": "Besim Yucel", "role": "Treasurer", "email": "byucel@umich.edu", "photo": null, "bio": ""}
+    {
+      "name": "Dilara Nevin Arican",
+      "role": "Event Organizer Chair",
+      "email": "aricand@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Bora Bedir",
+      "role": "Vice President",
+      "email": "bedir@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Poyraz Canbek",
+      "role": "Social Chair",
+      "email": "poyraz@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Arda Edil",
+      "role": "President",
+      "email": "ardaedil@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Eda Deniz Gur",
+      "role": "Cultural Chair",
+      "email": "edeniz@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Ogulcan Makaraci",
+      "role": "Sportive Activities Chair",
+      "email": "makaraci@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Alara Onur",
+      "role": "Outreach Chair",
+      "email": "aonur@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Kerim Onder Ulucay",
+      "role": "Finance Chair",
+      "email": "ulucay@umich.edu",
+      "photo": null,
+      "bio": ""
+    },
+    {
+      "name": "Besim Yucel",
+      "role": "Treasurer",
+      "email": "byucel@umich.edu",
+      "photo": null,
+      "bio": ""
+    }
   ],
   "events": [
-    {"id": "tea-conversation", "title": "Çay & Conversation", "date": "Date to be announced", "location": "Venue to be announced", "upcoming": true, "sample": true, "summary": "A cup of tea and a chance to meet the TSA community.", "cover": null, "photos": []},
-    {"id": "welcome-picnic", "title": "Welcome Picnic", "date": "Sample past event", "location": "Ann Arbor", "upcoming": false, "sample": true, "summary": "A place for a short recap of the gathering.", "cover": null, "photos": []},
-    {"id": "culture-night", "title": "Turkish Culture Night", "date": "Sample past event", "location": "Ann Arbor", "upcoming": false, "sample": true, "summary": "Event highlights, shared traditions, and community photos will go here.", "cover": null, "photos": []},
-    {"id": "community-dinner", "title": "Community Dinner", "date": "Sample past event", "location": "Ann Arbor", "upcoming": false, "sample": true, "summary": "A place for the story and photographs from a shared evening.", "cover": null, "photos": []}
+    {
+      "id": "tailgate-game-day",
+      "title": "Tailgate & Game Day",
+      "titleTr": "Maç Günü",
+      "date": "November 7, 2026",
+      "location": "Ann Arbor",
+      "upcoming": false,
+      "sample": false,
+      "summary": "TSA members gathering for a Michigan game day.",
+      "cover": "assets/images/events/tailgate-turkish-flag.webp",
+      "photos": [
+        {
+          "src": "assets/images/events/tailgate-turkish-flag.webp",
+          "alt": "TSA members holding a Turkish flag at the tailgate"
+        },
+        {
+          "src": "assets/images/events/tailgate-gathering.webp",
+          "alt": "TSA community gathering outdoors at the tailgate"
+        },
+        {
+          "src": "assets/images/events/tailgate-friends.webp",
+          "alt": "Members in Michigan apparel at a game-day gathering"
+        },
+        {
+          "src": "assets/images/events/tailgate-flags.webp",
+          "alt": "Members with Turkish flags during the tailgate"
+        },
+        {
+          "src": "assets/images/events/tailgate-group.webp",
+          "alt": "A group of TSA members at the tailgate"
+        },
+        {
+          "src": "assets/images/events/game-day-stadium.webp",
+          "alt": "TSA members in the stands at Michigan Stadium"
+        },
+        {
+          "src": "assets/images/events/game-day-scoreboard.webp",
+          "alt": "TSA members beneath the Michigan scoreboard"
+        },
+        {
+          "src": "assets/images/events/game-day-stands.webp",
+          "alt": "TSA members together in the stadium stands"
+        }
+      ]
+    },
+    {
+      "id": "republic-day-brunch",
+      "title": "Turkish Republic Day Brunch",
+      "titleTr": "Cumhuriyet Bayramı",
+      "date": "November 1, 2026",
+      "location": "",
+      "upcoming": false,
+      "sample": false,
+      "summary": "Celebrating Turkish Republic Day with a community brunch.",
+      "cover": "assets/images/events/republic-day-brunch.webp",
+      "photos": [
+        {
+          "src": "assets/images/events/republic-day-brunch.webp",
+          "alt": "TSA members gathered around a restaurant table for the Turkish Republic Day brunch"
+        }
+      ]
+    },
+    {
+      "id": "mangal-vic-south",
+      "title": "Mangal at Vic South",
+      "titleTr": "Dönem Açılış Mangalı",
+      "date": "First weekend of the semester",
+      "location": "Vic South rooftop",
+      "upcoming": false,
+      "sample": false,
+      "summary": "A rooftop barbecue at Vic South to welcome the new semester.",
+      "cover": "assets/images/events/mangal-group.webp",
+      "photos": [
+        {
+          "src": "assets/images/events/mangal-group.webp",
+          "alt": "The TSA community with a Turkish flag at the Vic South rooftop barbecue"
+        },
+        {
+          "src": "assets/images/events/mangal-rooftop.webp",
+          "alt": "TSA members at the rooftop mangal as the sun sets"
+        }
+      ]
+    },
+    {
+      "id": "soccer",
+      "title": "Soccer",
+      "titleTr": "Futbol",
+      "date": "Fall 2026",
+      "location": "",
+      "upcoming": false,
+      "sample": false,
+      "summary": "TSA members on the soccer field.",
+      "cover": "assets/images/events/soccer-team.webp",
+      "photos": [
+        {
+          "src": "assets/images/events/soccer-team.webp",
+          "alt": "TSA soccer players lined up together on the field"
+        },
+        {
+          "src": "assets/images/events/soccer-field.webp",
+          "alt": "TSA players posing in front of a soccer goal"
+        },
+        {
+          "src": "assets/images/events/soccer-team-photo.webp",
+          "alt": "TSA soccer players gathered for a team photograph"
+        }
+      ]
+    }
   ],
   "newsletters": [
-    {"id": "sample-03", "title": "TSA Updates", "date": "Sample edition", "sample": true, "summary": "Board announcements, upcoming events, and community news.", "paragraphs": ["Merhaba, Michigan!", "This sample edition shows the newsletter format. Confirmed announcements, event details, and community updates will appear here.", "TSA Yönetim Kurulu / TSA Board"]},
-    {"id": "sample-02", "title": "Community Announcements", "date": "Sample archive edition", "sample": true, "summary": "News and announcements from the TSA community.", "paragraphs": ["Merhaba!", "This is a sample archive entry. A published newsletter will replace this text.", "TSA Yönetim Kurulu / TSA Board"]},
-    {"id": "sample-01", "title": "Semester Overview", "date": "Sample archive edition", "sample": true, "summary": "Semester plans and information for TSA members.", "paragraphs": ["Merhaba!", "This is a sample archive entry. A published semester update will replace this text.", "TSA Yönetim Kurulu / TSA Board"]}
-  ]
+    {
+      "id": "sample-03",
+      "title": "TSA Updates",
+      "date": "Sample edition",
+      "sample": true,
+      "summary": "Board announcements, upcoming events, and community news.",
+      "paragraphs": [
+        "Merhaba, Michigan!",
+        "This sample edition shows the newsletter format. Confirmed announcements, event details, and community updates will appear here.",
+        "TSA Yönetim Kurulu / TSA Board"
+      ]
+    },
+    {
+      "id": "sample-02",
+      "title": "Community Announcements",
+      "date": "Sample archive edition",
+      "sample": true,
+      "summary": "News and announcements from the TSA community.",
+      "paragraphs": [
+        "Merhaba!",
+        "This is a sample archive entry. A published newsletter will replace this text.",
+        "TSA Yönetim Kurulu / TSA Board"
+      ]
+    },
+    {
+      "id": "sample-01",
+      "title": "Semester Overview",
+      "date": "Sample archive edition",
+      "sample": true,
+      "summary": "Semester plans and information for TSA members.",
+      "paragraphs": [
+        "Merhaba!",
+        "This is a sample archive entry. A published semester update will replace this text.",
+        "TSA Yönetim Kurulu / TSA Board"
+      ]
+    }
+  ],
+  "heroPhotoAlt": "TSA members with a Turkish flag at the Vic South rooftop mangal",
+  "homeFeaturedEvent": "republic-day-brunch"
 }

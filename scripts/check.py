@@ -72,10 +72,16 @@ for name, page in pages.items():
             assert unquote(url.fragment) in pages[path].ids, f'{name}: missing fragment {reference}'
         references += 1
 
-roster = json.loads((ROOT / 'data/site.json').read_text(encoding='utf-8'))['board']
+site_data = json.loads((ROOT / 'data/site.json').read_text(encoding='utf-8'))
+roster = site_data['board']
+album_photos = [photo for event in site_data['events'] for photo in event['photos']]
+for photo in album_photos:
+    assert photo.get('alt', '').strip(), 'Album photographs need descriptive alt text'
+    if not urlsplit(photo['src']).scheme:
+        assert (ROOT / photo['src']).is_file(), f'Missing album photo: {photo["src"]}'
 assert pages['board.html'].members == 9, 'Expected all nine authorized board members'
 board_html = (ROOT / 'board.html').read_text(encoding='utf-8')
 for member in roster:
     assert f'mailto:{member["email"]}' in board_html, f'Missing board email: {member["name"]}'
 assert [member['name'].split()[-1] for member in roster] == sorted(member['name'].split()[-1] for member in roster), 'Roster must be alphabetical by last name'
-print(f'Checked {len(pages)} pages, {references} local references, form labels, issue data, and all 9 board members.')
+print(f'Checked {len(pages)} pages, {references} local references, {len(album_photos)} album photos, form labels, issue data, and all 9 board members.')

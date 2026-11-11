@@ -6,6 +6,8 @@ from urllib.parse import quote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / 'data/site.json').read_text(encoding='utf-8'))
+PHOTO_INDEX_PATH = ROOT / 'data/photo-sources.json'
+PHOTO_INDEX = {item['asset']: item for item in json.loads(PHOTO_INDEX_PATH.read_text(encoding='utf-8'))} if PHOTO_INDEX_PATH.exists() else {}
 NAV = [('index.html', 'Home'), ('board.html', 'Board'), ('events.html', 'Events'),
        ('newsletter.html', 'Newsletter'), ('join.html', 'Join & Contact')]
 
@@ -29,7 +31,9 @@ def asset(source):
 
 def photo(source=None, label='Community photograph', extra=''):
     if source:
-        return f'<img class="photo {extra}" src="{asset(source)}" alt="{e(label)}" loading="lazy">'
+        dimensions = PHOTO_INDEX.get(source)
+        size = f' width="{dimensions["width"]}" height="{dimensions["height"]}"' if dimensions else ''
+        return f'<img class="photo {extra}" src="{asset(source)}" alt="{e(label)}"{size} loading="lazy">'
     return f'''<div class="photo-placeholder {extra}" role="img" aria-label="{e(label)} placeholder">
         <span class="photo-symbol" aria-hidden="true">＋</span><span class="photo-label">{e(label)}<br>Photo coming soon</span></div>'''
 
@@ -54,16 +58,23 @@ def signup():
 
 def event_card(event):
     sample = '<div class="sample-label">Sample event</div>' if event['sample'] else ''
-    return f'''<article class="event-card">{photo(event['cover'], event['title'])}{sample}<h3>{e(event['title'])}</h3>
+    translation = f'<div class="sample-label" lang="tr">{e(event["titleTr"])}</div>' if event.get('titleTr') else ''
+    photos_label = f'View {len(event["photos"])} Photo' + ('s' if len(event['photos']) != 1 else '') if event['photos'] else 'Open photo album'
+    return f'''<article class="event-card" id="{e(event['id'])}">{photo(event['cover'], event['title'])}{sample}{translation}<h3>{e(event['title'])}</h3>
     <div class="meta">{e(event['date'])}</div><p>{e(event['summary'])}</p>
-    <button class="text-link" type="button" data-album="{e(event['id'])}">Open photo album <span aria-hidden="true">↗</span></button></article>'''
+    <button class="text-link" type="button" data-album="{e(event['id'])}" aria-label="{e(photos_label)} from {e(event['title'])}">{e(photos_label)} <span aria-hidden="true">↗</span></button></article>'''
 
 
 def home():
-    image = (f'<img class="home-photo" src="{asset(DATA["heroPhoto"])}" alt="The TSA community at Michigan">'
+    image = (f'<img class="home-photo" src="{asset(DATA["heroPhoto"])}" alt="{e(DATA.get("heroPhotoAlt", "The TSA community at Michigan"))}" width="{PHOTO_INDEX.get(DATA["heroPhoto"], {}).get("width", 1600)}" height="{PHOTO_INDEX.get(DATA["heroPhoto"], {}).get("height", 1200)}" fetchpriority="high">'
              if DATA['heroPhoto'] else '''<div class="home-poster"><div class="eyebrow" lang="tr">Hoş geldiniz</div>
              <div class="poster-type" lang="tr">Merhaba,<br>Michigan.</div><span class="photo-caption">Welcome to TSA<br>Community photograph coming soon</span></div>''')
-    latest = DATA['newsletters'][0]
+    featured = next((event for event in DATA['events'] if event['id'] == DATA.get('homeFeaturedEvent')), None)
+    feature = ''
+    if featured:
+        translation = f'<div class="eyebrow" lang="tr">{e(featured["titleTr"])}</div>' if featured.get('titleTr') else '<div class="eyebrow">TSA Events</div>'
+        feature = f'''<section class="section tinted"><div class="wrap home-feature">{photo(featured['cover'], featured['title'], 'featured-photo')}<div>{translation}<h2>{e(featured['title'])}</h2>
+        <div class="meta">{e(featured['date'])}</div><p>{e(featured['summary'])}</p>{button('events.html#' + featured['id'], 'View Event Photos')}</div></div></section>'''
     return f'''<section class="hero home-hero"><div class="wrap home-grid"><div><div class="eyebrow" lang="tr">Michigan Üniversitesi</div>
     <h1>Turkish Student<br>Association</h1><p>Connecting students through Turkish culture, campus events, and community at the University of Michigan.</p>
     {button('join.html', 'Join TSA')}</div>{image}</div></section>
@@ -71,8 +82,7 @@ def home():
     <div class="home-paths"><article class="home-path"><h2>Board Members</h2><p>Meet the students responsible for TSA's programs and activities.</p><a class="text-link" href="board.html">View Board ↗</a></article>
     <article class="home-path"><h2>Events</h2><p>Upcoming gatherings, cultural programs, and past-event photographs.</p><a class="text-link" href="events.html">View Events ↗</a></article>
     <article class="home-path"><h2>Weekly Newsletter</h2><p>Announcements and updates from the TSA board.</p><a class="text-link" href="newsletter.html">Read Newsletter ↗</a></article></div></div></section>
-    <section class="section tinted"><div class="wrap home-feature">{photo(None, 'Community gathering', 'on-tint')}<div><div class="eyebrow" lang="tr">Haftalık Bülten</div>
-    <h2>{e(latest['title'])}</h2><div class="sample-label">Sample newsletter</div><p>{e(latest['summary'])}</p>{button('newsletter.html', 'View Newsletter')}</div></div></section>'''
+    {feature}'''
 
 
 def board():
@@ -100,7 +110,7 @@ def events():
         <div class="meta">{e(event['date'])}<br>{e(event['location'])}</div><p>{e(event['summary'])}</p>
         {button(f'mailto:{DATA["contactEmail"]}?subject={subject}', 'Ask the board')}</div></article>'''
     if not upcoming:
-        featured = '<p class="intro">New gatherings will be announced here. Check back soon.</p>'
+        featured = '<section class="upcoming-empty"><div class="section-heading"><h2>Upcoming Events</h2><p lang="tr">Yaklaşan Etkinlikler</p></div><p class="intro">The next TSA event will be announced here.</p></section>'
     notice = '<p class="notice">The listings below are layout placeholders. Confirmed events, dates, and photographs will be added here.</p>' if any(item['sample'] for item in DATA['events']) else ''
     return hero('Etkinlikler', 'Events', 'TSA gatherings, cultural programs, and past-event photographs.') + f'''
     <section class="section"><div class="wrap">{notice}{featured}<hr class="rule"><div class="section-heading"><h2>Past Events</h2><p>Event recaps &amp; photo albums</p></div>

@@ -1,0 +1,100 @@
+[
+  {
+    "asset": "assets/images/events/mangal-group.webp",
+    "sourceFile": "e66de664-b07a-4b79-a985-b1149d51e75e.JPG",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 152740
+  },
+  {
+    "asset": "assets/images/events/mangal-rooftop.webp",
+    "sourceFile": "669e4f78-3e66-47be-9c4b-7cfb80001597.JPG",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 133930
+  },
+  {
+    "asset": "assets/images/events/republic-day-brunch.webp",
+    "sourceFile": "20c2520e-9097-4a0f-b50c-76ab76a776d2.JPG",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 201470
+  },
+  {
+    "asset": "assets/images/events/tailgate-turkish-flag.webp",
+    "sourceFile": "0650b745-5c2b-45f1-a49b-41297dea85ae.JPG",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 160690
+  },
+  {
+    "asset": "assets/images/events/tailgate-gathering.webp",
+    "sourceFile": "31759664_Unknown.JPEG",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 303686
+  },
+  {
+    "asset": "assets/images/events/tailgate-friends.webp",
+    "sourceFile": "31760112_Unknown.JPEG",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 127544
+  },
+  {
+    "asset": "assets/images/events/tailgate-flags.webp",
+    "sourceFile": "31760336_Unknown.JPEG",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 197992
+  },
+  {
+    "asset": "assets/images/events/tailgate-group.webp",
+    "sourceFile": "31760368_Unknown.JPEG",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 206696
+  },
+  {
+    "asset": "assets/images/events/game-day-stadium.webp",
+    "sourceFile": "9a60b946-0ec2-4d68-835e-5ba885f7ff88.JPG",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 152764
+  },
+  {
+    "asset": "assets/images/events/game-day-scoreboard.webp",
+    "sourceFile": "IMG_0397.jpg",
+    "width": 900,
+    "height": 1600,
+    "bytes": 97448
+  },
+  {
+    "asset": "assets/images/events/game-day-stands.webp",
+    "sourceFile": "IMG_0401.jpg",
+    "width": 900,
+    "height": 1600,
+    "bytes": 125546
+  },
+  {
+    "asset": "assets/images/events/soccer-team.webp",
+    "sourceFile": "IMG_0297.jpg",
+    "width": 1600,
+    "height": 900,
+    "bytes": 230892
+  },
+  {
+    "asset": "assets/images/events/soccer-field.webp",
+    "sourceFile": "deffea42-6412-4ad0-bf30-e025e2e11d83.JPG",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 345912
+  },
+  {
+    "asset": "assets/images/events/soccer-team-photo.webp",
+    "sourceFile": "IMG_9886.jpg",
+    "width": 900,
+    "height": 1600,
+    "bytes": 256840
+  }
+]

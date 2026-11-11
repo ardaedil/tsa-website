@@ -28,7 +28,7 @@ document.querySelectorAll('[data-album]').forEach(button => {
     openDialog(button, event.title, event.sample ? 'Sample photo album' : event.date);
     dialogBody.append(paragraph(event.summary, 'dialog-note'));
     const grid = document.createElement('div');
-    grid.className = 'album-grid';
+    grid.className = event.photos.length === 1 ? 'album-grid is-single' : 'album-grid';
     if (event.photos.length) {
       for (const [index, photo] of event.photos.entries()) {
         const link = document.createElement('a');

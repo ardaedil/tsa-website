@@ -32,6 +32,12 @@ Replace the sample event entries. Each entry has `id`, `title`, `date`, `locatio
 
 Missing covers and empty albums deliberately show placeholders. Sample listings are clearly marked; they are not real announcements. Supply confirmed dates and venues before treating events as published.
 
+The current albums use official photos supplied in the TSA Google Drive folder: the Vic South rooftop mangal, November 1 Republic Day brunch, November 7 tailgate/game day, and a soccer photo collection. Mangal is labeled as the first weekend of the semester; no exact date was supplied. The soccer collection has a semester label rather than a single event date.
+
+Optimized WebP copies are stored in `assets/images/events/`. Their source filenames and dimensions are recorded in `data/photo-sources.json`; the original files remain unchanged in Drive. Three near-duplicate scoreboard frames, two campus-table photos awaiting event context, and the video were not published in this pass. Board portraits remain placeholders because none of these files are labeled as individual portraits.
+
+`heroPhoto` and `heroPhotoAlt` control the homepage group photograph. `homeFeaturedEvent` selects the event featured farther down the homepage. Event `titleTr` values add Turkish subtitles.
+
 ### Newsletters
 
 The first newsletter in the list is featured. Each entry has `id`, `title`, `date`, `sample`, `summary`, and a `paragraphs` array of plain-text paragraphs. Replace the sample issues and set `sample` to `false`. The sample notice disappears when all editions are real.
